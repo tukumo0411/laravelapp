@@ -8,28 +8,21 @@ use Illuminate\Routing\Route;
 class HelloController extends Controller
 {
   
-   public function index($id='noname', $pass='unknown') {
-
-       return <<<EOF
-<html>
-<head>
-<title>Hello/Index</title>
-<style>
-body {font-size:16pt; color:#999; }
-h1 { font-size:100pt; text-align:right; color:#dcdcdc;
-   margin:-40px 0px -50px 0px; }
-</style>
-</head>
-<body>
-   <h1>Index</h1>
-   <p>これは、Helloコントローラのindexアクションです。</p>
-   <ul>
-        <li>ID: {$id}</li>
-        <li>PASS: {$pass}</li>
-   </ul>
-</body>
-</html>
-EOF;
-
+   public function index()
+   {
+       $data = [
+           'msg'=>'お名前を入力下さい。',
+       ];
+       return view('hello.index', $data);
    }
+
+   public function post(Request $request)
+   {
+       $msg = $request->msg;
+       $data = [
+           'msg'=>'こんにちは、' . $msg . 'さん！',
+       ];
+       return view('hello.index', $data);
+   }
+
 }
