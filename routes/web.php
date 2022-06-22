@@ -21,3 +21,8 @@ Route::get('/', function () {
 
 Route::get('hello', 'HelloController@index');
 Route::post('hello', 'HelloController@post');
+
+Route::get('jissyuu3_1', 'Jissyuu3_1Controllerr@index');
+Route::post('jissyuu3_1', 'Jissyuu3_1Controller@post');
+
+Route::get('jissyu3_3', 'Jissyu3_1Controller@index');

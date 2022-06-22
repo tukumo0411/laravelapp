@@ -3,7 +3,7 @@
    <title>Hello/Index</title>
    <style>
    body {font-size:16pt; color:#999; }
-   h1 { font-size:50pt; text-align:right; color:#dcdcdc;
+   h1 { font-size:50pt; text-align:right; color:#999;
        margin:-20px 0px -30px 0px; letter-spacing:-4pt; }
    </style>
 </head>
@@ -19,9 +19,8 @@
     
     @section('content')
     <p>ここが本文のコンテンツです。</p>
-    <ul>
-    @each('components.item', $data, 'item')
-    </ul>
+    <p>Controller value<br>'message' = {{$message}}</p>
+    <p>ViewComposer value<br>'view_message' = {{$view_message}}</p>
  @endsection
  
     @section('footer')
