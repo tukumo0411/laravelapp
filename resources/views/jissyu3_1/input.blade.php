@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>Blade/Index</h1>
-    <p>___(8)___</p>
+    <p>{{$msg}}</p>
     <form method="POST" action="___(9)___">
         @csrf
         <input type="text" name="msg">
@@ -17,3 +17,4 @@
     </form>
  </body>
 </html>
+

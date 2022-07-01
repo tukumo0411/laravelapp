@@ -19,11 +19,20 @@ Route::get('/', function () {
 //    return '<html><body><h1>Hello</h1><p>This is sample page.</p></body></html>';
 // });
 
-Route::get('jissyuu3_1', 'Jissyuu3_1Controllerr@index');
-Route::post('jissyuu3_1', 'Jissyuu3_1Controller@post');
-
-Route::get('jissyu3_3', 'Jissyu3_1Controller@index');
-
 use App\Http\Middleware\HelloMiddleware;
 Route::get('hello', 'HelloController@index')
    ->middleware(HelloMiddleware::class);
+
+Route::get('jissyu2', 'JissyuController@index');
+Route::get('jissyu3', 'Jissyu3_1Controller@index');
+Route::post('jissyu3', 'Jissyu3_1Controller@post');
+Route::get('jissyu4', 'Jissyu3_2Controller@index');
+Route::post('jissyu4', 'Jissyu3_2Controller@post');
+
+Route::get('kouka1_1', 'Kouka1_1Controller@index');
+
+Route::get('kouka1_2', 'Kouka1_2Controller@index');
+Route::post('kouka1_2', 'Kouka1_2Controller@post');
+
+
+
