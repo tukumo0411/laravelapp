@@ -35,7 +35,8 @@ class HelloController extends Controller
        return redirect('/hello');
    }
 
-   public function edit(Request $request)
+//データの更新
+public function edit(Request $request)
 {
    $param = ['id' => $request->id];
    $item = DB::select('select * from people where id = :id', $param);
@@ -53,4 +54,20 @@ public function update(Request $request)
    DB::update('update people set name =:name, mail = :mail, age = :age where id = :id', $param);
    return redirect('/hello');
 }
+
+//データの削除
+public function del(Request $request)
+{
+   $param = ['id' => $request->id];
+   $item = DB::select('select * from people where id = :id', $param);
+   return view('hello.del', ['form' => $item[0]]);
+}
+
+public function remove(Request $request)
+{
+   $param = ['id' => $request->id];
+   DB::delete('delete from people where id = :id', $param);
+   return redirect('/hello');
+}
+
 }
