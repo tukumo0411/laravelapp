@@ -27,3 +27,8 @@ Route::get('jissyu3_3', 'Jissyu3_1Controller@index');
 use App\Http\Middleware\HelloMiddleware;
 Route::get('hello', 'HelloController@index')
    ->middleware(HelloMiddleware::class);
+
+//jissyu5_1
+Route::get('___(1)___', '___(2)___');
+Route::get('___(3)___', '___(4)___');
+   
