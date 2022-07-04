@@ -6,9 +6,10 @@ use Illuminate\View\View;
 class HelloComposer
 {
   
-    public function index(Request $request)
+    public function boot()
     {
-       $items = DB::table('people')->get();
-       return view('hello.index', ['items' => $items]);
+       View::composer(
+           'hello.index', 'App\Http\Composers\HelloComposer'
+       );
     }
 }
