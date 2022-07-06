@@ -53,6 +53,10 @@ Route::get('hello/show', 'HelloController@show');
 //パーソン
 Route::get('person', 'PersonController@index');
 
+//パーソンによるID検索
+Route::get('person/find', 'PersonController@find');
+Route::post('person/find', 'PersonController@search');
+
 
 
 
