@@ -65,6 +65,9 @@ Route::post('person/add', 'PersonController@create');
 Route::get('person/edit', 'PersonController@edit');
 Route::post('person/edit', 'PersonController@update');
 
+//モデルの削除
+Route::get('person/del', 'PersonController@delete');
+Route::post('person/del', 'PersonController@remove');
 
 
 
