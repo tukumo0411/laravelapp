@@ -50,6 +50,30 @@ Route::post('hello/del', 'HelloController@remove');
 //指定したIDのレコードを得る
 Route::get('hello/show', 'HelloController@show');
 
+//パーソン
+Route::get('person', 'PersonController@index');
+
+//パーソンによるID検索
+Route::get('person/find', 'PersonController@find');
+Route::post('person/find', 'PersonController@search');
+
+//モデルの作成
+Route::get('person/add', 'PersonController@add');
+Route::post('person/add', 'PersonController@create');
+
+//モデルの更新
+Route::get('person/edit', 'PersonController@edit');
+Route::post('person/edit', 'PersonController@update');
+
+//モデルの削除
+Route::get('person/del', 'PersonController@delete');
+Route::post('person/del', 'PersonController@remove');
+
+//Boardテーブルの作成
+Route::get('board', 'BoardController@index');
+
+Route::get('board/add', 'BoardController@add');
+Route::post('board/add', 'BoardController@create');
 
 
 
