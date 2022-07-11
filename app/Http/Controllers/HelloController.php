@@ -83,4 +83,24 @@ public function show(Request $request)
    return view('hello.show', ['items' => $items]);
 }
 
+//REST
+public function rest(Request $request)
+{
+   return view('hello.rest');
+}
+
+//セッション
+public function ses_get(Request $request)
+{
+   $sesdata = $request->session()->get('msg');
+   return view('hello.session', ['session_data' => $sesdata]);
+}
+
+public function ses_put(Request $request)
+{
+   $msg = $request->input;
+   $request->session()->put('msg', $msg);
+   return redirect('hello/session');
+}
+
 }
