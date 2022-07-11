@@ -21,7 +21,8 @@ Route::get('/', function () {
 
 use App\Http\Middleware\HelloMiddleware;
 Route::get('hello', 'HelloController@index')
-   ->middleware(HelloMiddleware::class);
+   //->middleware(HelloMiddleware::class);
+   ->middleware('auth');
 
 //実習
 Route::get('jissyu2', 'JissyuController@index');
@@ -83,7 +84,15 @@ Route::get('hello/rest', 'HelloController@rest');
 Route::get('hello/session', 'HelloController@ses_get');
 Route::post('hello/session', 'HelloController@ses_put');
 
+//ログイン認証
+Route::get('hello/auth', 'HelloController@getAuth');
+Route::post('hello/auth', 'HelloController@postAuth');
 
 
 
 
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
