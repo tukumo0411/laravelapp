@@ -3323,11 +3323,11 @@ class ExampleTest extends TestCase
 }
 
 
-リスト7-35
+リスト7-36
 <env name="DB_DATABASE" value="database\database_test.sqlite"/>
 
 
-リスト7-36
+リスト7-37
 <?php
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 use App\User;
@@ -3345,7 +3345,7 @@ $factory->define(User::class, function (Faker $faker) {
 });
 
 
-リスト7-37
+リスト7-38
 $factory->define(App\Person::class, 
       function (Faker $faker) {
    return [
@@ -3356,11 +3356,11 @@ $factory->define(App\Person::class,
 });
 
 
-リスト7-38
+リスト7-39
 php artisan make:test HelloTest
 
 
-リスト7-39
+リスト7-40
 <?php
 
 namespace Tests\Feature;
