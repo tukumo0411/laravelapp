@@ -31,4 +31,9 @@ Route::get('hello', 'HelloController@index')
 //jissyu5_1
 Route::get('___(1)___', '___(2)___');
 Route::get('___(3)___', '___(4)___');
+
+//jissyu6_1
+Route::get('person', 'PersonController@index');
+Route::post('person', 'PersonController@show');
+
    
